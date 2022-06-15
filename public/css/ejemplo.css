@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    color: red;
+}
+p{
+    font-family: 'Monserrat', Arial;
+    color: salmon;
+}
+
+ol{
+    color:greenyellow;
+    font-size: 15px;
+    font-family: Helvetica, sans-serif;
+}
+ul{
+    background-color: blue;
+    color:orangered;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.destacado{
+    background-color: peru;
+    color: blue
+}
+strong{
+    background-color: black;
+    color: gray;
+    font-size: 20px;
+}
+
+p strong{
+    background-color: gray;
+    color: black;
+    font-size: 22px;
+}
+ol .destacado{
+    background-color: aqua;
+    color: blueviolet;
+    font-size: 15px;
+}
+.imagen{
+    width: 360px;
+}
+
+.ejemplo-caja{
+    width: 80%;
+    padding: 15px;
+    border:5px solid black;
+    box-sizing: border-box;
+    margin: auto; /* centra la caja */
+}
+
+.contenedor1{
+    background-color: pink;
+    width: 90%;
+   }
+.contenedor2{
+    background-color: pink;
+    width: 50%;
+    
+}
+
+@media (min-width: 576px){
+    .contenedor1,.contenedor2{
+        width: 70%;
+        margin: auto;
+    }
+    body{
+        background-color: yellow;
+    }
+}
+@media (min-width: 768px){
+    .contenedor1{
+        background-color: aqua;
+    }
+    .contenedor2{
+        background-color: yellowgreen;
+    }
+    body{
+        background-color: white;
+    }
+}
+@media (min-width: 992px){
+    .contenedor1,.contenedor2{
+        border: 10px solid black;
+    }
+}
+@media (min-width: 1200px){
+    .contenedor1,.contenedor2{
+        max-width: 1100px;
+    }
+}
+
+
