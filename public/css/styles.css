@@ -1,5 +1,7 @@
 *{
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
 }
 
 body{
@@ -10,35 +12,60 @@ body{
 header{
     background-color: #EAC926;
 }
+.header-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.logo-header{
+    width: 50%;       
+}
+
+.caja-busqueda{
+    display: flex;
+    width: 50%;
+    align-self: center;
+}
 
 .barra-de-busqueda{
+    font-size: 12px;
+    font-weight: bold;
     background-color: #ebebeb;
     color: #666;
-    width: 200px;
-    padding: 1px;
-    border:solid 1px #666;
-    margin-left: 5%;
+    padding: 1px ;
+    border: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: inherit;
 }
 
 .button-search{
     background-color: #ebebeb;
+    border:none;
     padding: 1px;
-    border:solid 1px #666;
-    margin-left: 5%;
-}
-
-.icon-search{
     color: #03264c
 }
 
+p.centrado{
+    width: 100%;
+    padding: 2px;
+    align-self: center
+}
 .centrado{
     text-align: center;
+}
+
+.header-bot{
+    display: none;
+    justify-content: space-around;
 }
 
 .barra-de-navegacion{
     list-style-type: none;
     padding-left: 1px;
-    display: none;
 }
 
 .vinculo{
@@ -68,29 +95,10 @@ div.barra-de-burger{
     font-size: 24px;
 }
 
-.precios{
-    font-size: 18px;
-}
-
-.descriptores{
-    font-size: 16px;
-    display: none;
-}
-
-.descuentos{
-    font-size: 16px;
-    color: #39b54a
-}
-
-.camion{
-    color: #39b54a
-}
-
 .borde{
     padding: 50px;
     box-sizing: border-box;
 }
-
 
 .icono-footer{
     padding: 5px;
@@ -105,32 +113,254 @@ div.barra-de-burger{
     width:  90%;
 }
 
+.caja-articulo{
+    display: flex;
+    flex-wrap: wrap;
+ }
+
 .articulo{
+    margin: 5px;
     margin-bottom: 10px;
     background-color: white;
+    min-width: 300px;
+    width: 300px;
+    transition: all 750ms;
 }
 
-.info-articulo{
+.articulo:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+.caja-info-articulo{
     border: 1px solid #ebebeb;
     padding: 15px;
 }
 
+.info-articulo{
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.imagen-articulo{
+    width: 100%;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    color:#39b54a;
+    transition: all 750ms;
+}
+
+main section article i:hover{
+    transform: rotate(-90deg);
+}
+
+.precios{
+    font-size: 18px;
+    width: 30%;
+    min-width: fit-content;
+}
+
+.descuentos{
+    font-size: 16px;
+    color: #39b54a;
+    width: 70%;
+    min-width: fit-content;
+}
+
+.descriptores{
+    font-size: 16px;
+    display: none;
+    transition: all 750ms;
+}
+.articulo:hover .descriptores{
+    display: contents;
+}
+
+
+.borde{
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+.icono-footer{
+    padding: 5px;
+    border: none;
+    background-color: #ebebeb;
+    color: #1259c3;
+    font-size: 2em;
+    margin-bottom: 10px;
+    transition: all 750ms;
+}
+.icono-footer:hover{
+    color:#0022AA;
+}
+
+.cuerpo-registro{
+    padding: 20px;
+    background-color:#666;
+    margin: auto;
+    width: 75%;
+    transition: all 750ms;
+}
+
+
+.elemento-formulario{
+    margin-bottom: 15px;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.checkbox label{
+    font-weight:400;
+    margin-left: 8px;
+}
+
+.elemento-formulario label{
+    display: block;
+}
+
+.campo-formulario{
+    width: 80%;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+}
+
+#radio{
+    justify-content: space-evenly;
+}
+#radio div{
+    display: flex;
+}
+.foto{
+    width: 100%;    
+ }
+
+.checkbox{
+    display: flex;
+}
+
+.boton-formulario{
+    background-color: #1259c3;
+    color: #ebebeb;
+    padding: 3px;
+    font-size: 18px;
+    border-radius: 3px;
+}
+
+.boton-formulario:hover{
+    background-color: #0022AA;
+}
+
+.cuerpo-registro-login{
+    padding: 20px;
+    background-color:#1259c3;
+    margin: auto;
+    margin-top: 20px;
+    width: 25%;
+    min-width: 300px;
+    text-align: center; 
+    border-radius: 8px; 
+}
+
+.elemento-formulario-login{
+    margin: 10px;
+}
+
+.campo-formulario-login{
+    width: 90%;
+    padding: 3px;
+    margin: 10px;
+    border-radius: 7px;
+}
+
+.elemento-formulario-login label{
+    font-size: 20px;
+    color:#03264c;   
+}
+
+.boton-formulario-login{
+    background-color:#03264c;
+    color:#ebebeb;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+
+
+
 @media (min-width: 361px){ /*tablet*/
+
+   .logo-header,
+    .caja-busqueda,
+    p.centrado{
+        width: 30%;
+    }  
+    
+     /*
     .descriptores{
         display: block;
-    }
+    }*/
+    
     .articulo{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+       /* box-shadow: 0px 0px 10px rgb(100, 100, 100);*/
+        width: 45%;
+        min-width: 0px;
     }
-    .barra-de-navegacion{
+    .header-bot{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .header-bot ul{
         display: block;
     }
+
+    .header-bot li{
+        margin: 3px;
+    }
+
     div.barra-de-burger{
         display: none;
     }
 }
 
-@media (min-width: 769px){ /*desktop*/
+@media (min-width: 769px){ /*desktop*/ 
+    
+    .barra-de-busqueda{
+        font-size: 19px;
+        font-weight: 400;
+        padding: 3px;       
+    }
 
+    .articulo{
+         width: 23%;
+         min-width: 0px;
+    }
 
+    .header-bot ul{
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .caja-footer{
+        display: flex;
+        flex-wrap: nowrap;
+    }
 }

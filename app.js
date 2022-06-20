@@ -11,16 +11,15 @@ app.get('/',(req, res)=>{
     res.sendFile(home)
 });
 
-app.get('/home',(req, res)=>{
-    res.sendFile(path.resolve(__dirname,'./views/homeProfe.html'))
+app.get('/register',(req, res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/register.html'))
 })
 
-app.get('/ejemplo',(req, res)=>{
-    res.sendFile(path.resolve(__dirname,'./views/ejemplo.html'))
+app.get('/login',(req, res)=>{
+    res.sendFile(path.resolve(__dirname,'./views/login.html'))
 })
-
 // aqui se levanta el servidor
-
-app.listen(3000, ()=>{
-    console.log('Server Up! ;)');
+let puerto =  process.env.PORT || 3000;
+app.listen(puerto, ()=>{
+    console.log('Server Up! ;) Puerto: ' + puerto);
 });
